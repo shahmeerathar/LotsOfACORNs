@@ -4,12 +4,12 @@
   "version": "1.0.0",
   "manifest_version": 3,
   "background": {
-    "service_worker": "/js/background.js"
+    "service_worker": "/background.js"
   },
-  "permissions": ["storage", "activeTab", "scripting", "*://acorn.utoronto.ca/sws/#/"],
+  "permissions": ["storage", "activeTab", "scripting"],
   "content_scripts": [
     {
-      "matches": ["*://acorn.utoronto.ca/sws/#/"],
+      "matches": ["<all_urls>"],
       "js": ["/js/richify.js"]
     }
   ],

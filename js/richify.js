@@ -6,7 +6,7 @@ var intervalID = setInterval(function() {
         clearInterval(intervalID);
         updateContent();
     }
-}, 1000);
+}, 16);
 
 function updateContent() {
     var max = 10000000;

@@ -1,12 +1,18 @@
 {
-  "name": "Getting Started Example",
-  "description": "Build an Extension!",
-  "version": "1.0",
+  "name": "LotsOfACORNs",
+  "description": "You're rich",
+  "version": "1.0.0",
   "manifest_version": 3,
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "/js/background.js"
   },
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": ["storage", "activeTab", "scripting", "*://acorn.utoronto.ca/sws/#/"],
+  "content_scripts": [
+    {
+      "matches": ["*://acorn.utoronto.ca/sws/#/"],
+      "js": ["/js/richify.js"]
+    }
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
